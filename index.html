@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice-Roller</title>
-</head>
-<style>
-    body{
-        background-color: #EBE5C2;
+  </head>
+  <style>
+    body {
+      background-color: #ebe5c2;
     }
-    .dice-card{
-        height: 300px;
-        width: 300px;
-        border: none;
-        margin:200px auto;
-        border-radius: 5px 5px;
-        padding: 10px;
-        box-shadow: 3px 3px 15px  #504B38;
-        background-color: #F8F3D9;
-    
+    .dice-card {
+      height: 300px;
+      width: 260px;
+      border: none;
+      margin: 200px auto;
+      border-radius: 5px 5px;
+      padding: 10px;
+      box-shadow: 3px 3px 15px #504b38;
+      background-color: #f8f3d9;
     }
-    .default-img{
-        height: 200px;
-        width: 250px;
-        margin: 20px 26px;
-
+    .default-img {
+      height: 190px;
+      width: 200px;
+      margin: 20px 30px;
     }
-    .btn{
-        margin: 7px 35px;
-        width: 230px;
-   font-size: 20px;
-   padding: 7px;
-   border: none ;
-   border-radius: 10px;
-   background-color: #B9B28A;
-   
-    
-         
-       
+    .btn {
+      margin: 7px 31px;
+      width: 200px;
+      font-size: 20px;
+      padding: 7px;
+      border: none;
+      border-radius: 10px;
+      background-color: #b9b28a;
+      cursor: pointer;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div class="dice-card">
-        <img src="./img/dice.png" class="default-img">
-        <button type="button" class="btn">Roll The Dice</button>
-
+      <img src="./img/dice.png" class="default-img" id="dice-img" />
+      <button type="button" class="btn" onclick="diceroller()">Roll The Dice</button>
     </div>
-</body>
+    <script>
+        const diceElement = document.getElementById('dice-img');
+        function diceroller(){
+            const min = 1;
+            const max = 7;
+
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+
+            switch(randomNumber){
+                case 1: diceElement.src = "./img/one.png";
+                console.log(randomNumber);
+                break;
+
+                case 2: diceElement.src = "./img/two.png";
+                console.log(randomNumber);
+                break;
+
+                case 3: diceElement.src = "./img/three.png";
+                console.log(randomNumber);
+                break;
+
+                case 4: diceElement.src = "./img/four.png";
+                console.log(randomNumber);
+                break;
+
+                case 5: diceElement.src = "./img/five.png";
+                console.log(randomNumber);
+                break;
+
+                case 6: diceElement.src = "./img/six.png";
+                console.log(randomNumber);
+                break;
+
+            }
+        }
+
+    </script>
+  </body>
 </html>
