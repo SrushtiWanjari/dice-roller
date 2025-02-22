@@ -6,12 +6,19 @@
     <title>Dice-Roller</title>
 </head>
 <style>
+    body{
+        background-color: #EBE5C2;
+    }
     .dice-card{
         height: 300px;
         width: 300px;
-        border: 3px double black;
-        margin: 50px auto;
+        border: none;
+        margin:200px auto;
         border-radius: 5px 5px;
+        padding: 10px;
+        box-shadow: 3px 3px 15px  #504B38;
+        background-color: #F8F3D9;
+    
     }
     .default-img{
         height: 200px;
@@ -19,11 +26,24 @@
         margin: 20px 26px;
 
     }
+    .btn{
+        margin: 7px 35px;
+        width: 230px;
+   font-size: 20px;
+   padding: 7px;
+   border: none ;
+   border-radius: 10px;
+   background-color: #B9B28A;
+   
+    
+         
+       
+    }
 </style>
 <body>
     <div class="dice-card">
         <img src="./img/dice.png" class="default-img">
-        <button type="button">Roll The Dice</button>
+        <button type="button" class="btn">Roll The Dice</button>
 
     </div>
 </body>
